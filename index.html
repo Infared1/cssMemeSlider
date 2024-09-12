@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Слайдер</title>
+    <title>Slider</title>
 </head>
 <body>
     <div class="slider-container">
         <div class="slider">
+
+            <!-- Радиокнопки -->
             <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
             <input type="radio" name="slider" id="slide3">
             <input type="radio" name="slider" id="slide4">
-        
+
+            <!-- Слайды -->
             <div class="slides">
                 <div class="slide" id="s1">
                     <img src="./image1.jpg" alt="Слайд 1">
-                    <p class="caption">Подпись к слайду 1</p>
+                    <p class="caption">Meme 1</p>
                 </div>
                 <div class="slide" id="s2">
                     <img src="./image2.png" alt="Слайд 2">
-                    <p class="caption">Подпись к слайду 2</p>
+                    <p class="caption">Meme 2</p>
                 </div>
                 <div class="slide" id="s3">
                     <img src="./image3.jpg" alt="Слайд 3">
@@ -29,16 +32,18 @@
                 </div>
                 <div class="slide" id="s4">
                     <img src="./image4.png" alt="Слайд 4">
-                    <p class="caption">Подпись к слайду 4</p>
+                    <p class="caption">Meme 4</p>
                 </div>
             </div>
 
+            <!-- Управляющие элементы -->
             <div class="controls">
-                <label for="slide1" class="control"></label>
-                <label for="slide2" class="control"></label>
-                <label for="slide3" class="control"></label>
-                <label for="slide4" class="control"></label>
+                <div class="dot_box"><label for="slide1" class="control"></label></div>
+                <div class="dot_box"><label for="slide2" class="control"></label></div>
+                <div class="dot_box"><label for="slide3" class="control"></label></div>
+                <div class="dot_box"><label for="slide4" class="control"></label></div>
             </div>
+
         </div>
     </div>
 </body>

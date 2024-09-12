@@ -1,19 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #323232;
+    background-color: #5f5a7d;
     margin: 0;
 }
 
 .slider-container {
     display: flex;
-    justify-content: center; /* Центрирование слайдера */
-    padding: 20px; /* Отступы */
+    justify-content: center;
+    padding: 20px;
 }
 
 .slider {
-    position: relative;
-    width: 100%; /* Задаем ширину слайдера */
-    max-width: 400px; /* Максимальная ширина слайдера */
+    width: 100%; 
+    max-width: 400px;
     overflow: hidden;
 }
 
@@ -23,13 +22,13 @@ input[type="radio"] {
 
 .slides {
     display: flex;
+    margin-bottom: 10px;
     transition: transform 0.5s ease;
 }
 
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-    position: relative;
 }
 
 .slide img {
@@ -64,31 +63,25 @@ input[type="radio"] {
 
 /* Управляющие элементы */
 .controls {
-    text-align: right;
-    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dot_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Увеличенная кликабельная область */
+    height: 30px; /* Увеличенная кликабельная область */
 }
 
 .control {
-    display: inline-block;
     width: 15px;
     height: 15px;
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
-    margin: 0 2px;
-    position: relative; /* Для псевдоэлементов */
-    transition: background-color 0.3s; /* Убираем трансформацию для размера */
-}
-
-/* Увеличение области нажатия с помощью псевдоэлемента */
-.control::before {
-    content: "";
-    position: absolute;
-    top: -10px; /* Расширяем область нажатия сверху */
-    left: -10px; /* Расширяем область нажатия слева */
-    right: -10px; /* Расширяем область нажатия справа */
-    bottom: -10px; /* Расширяем область нажатия снизу */
-    z-index: -1; /* Псевдоэлемент находится позади контрола */
+    z-index: 10;
 }
 
 /* Подсветка активного контрола */
@@ -114,13 +107,12 @@ input#slide4:checked ~ .controls label[for="slide4"] {
 
 /* Эффекты при наведении */
 .control:hover {
-    border: #341757 solid 2px;
     background-color: rgb(224, 95, 153);
 }
 
 /* Убираем изменение фона при нажатии */
 .control:active {
-    background-color: rgb(224, 95, 153); /* Можно изменить цвет при нажатии, но не увеличивать размер */
+    border: #6c0745 solid 2px;
 }
 
 @media (max-width: 430px) {
